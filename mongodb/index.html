@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+button.blue-pill {
+    margin-top: 35px;
+    width: 165px;
+    height: 70px;
+}
+#textareas{
+ margin-top: 10px
+}
+button.blue-pill:hover {
+    background-color: #9badcc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9badcc), color-stop(100%, #687fa6));
+    background-image: -webkit-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -moz-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -ms-linear-gradient(top, #9badcc, #687fa6);
+    background-image: -o-linear-gradient(top, #9badcc, #687fa6);
+    background-image: linear-gradient(top, #9badcc, #687fa6);
+    border-top: 1px solid #6d86ad;
+    border-right: 1px solid #647a9e;
+    border-bottom: 1px solid #546685;
+    border-left: 1px solid #647a9e;
+    -webkit-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    box-shadow: inset 0 1px 0 0 #a5b9d9;
+    cursor: pointer;
+}
+label{
+    margin-top: 12px;
+    text-align: center;
+    display: block;
+}
+#leftText{
+    margin-top: 30px
+    width:500px;
+}
+</style>
+
+<script>
+function myFunction(id){    
+  if(id=='1'){document.getElementById("label1").innerHTML = "How many unique users are there?";}
+  if(id==2){document.getElementById("label1").innerHTML = "How many tweets (%) did the top 10 users (measured by the number of messages)publish?";}
+  if(id==3){document.getElementById("label1").innerHTML = "What was the earliest and latest date (YYYY-MM-DD HH:MM:SS) that a message was
+published?";}
+  if(id==4){document.getElementById("label1").innerHTML = "What is the mean time delta between all messages?";}
+  if(id==5){document.getElementById("label1").innerText = "What is the mean length of a message?";}
+  if(id==6){document.getElementById("label1").innerText = "What are the 10 most common unigram and bigram strings within the messages?";}
+  if(id==7){document.getElementById("label1").innerText = "What is the average number of hashtags (#) used within a message?";}
+  if(id==8){document.getElementById("label1").innerText = "Which area within the UK contains the largest number of published messages?";}
+}
+</script>
+
+</head>
+<body>
+ <button class="blue-pill" onclick="myFunction('1')">Query1</button>
+ <button class="blue-pill" onclick="myFunction('2')">Query2</button>
+ <button class="blue-pill" onclick="myFunction('3')">Query3</button>
+ <button class="blue-pill" onclick="myFunction('4')">Query4</button>
+ <button class="blue-pill" onclick="myFunction('5')">Query5</button>
+ <button class="blue-pill" onclick="myFunction('6')">Query6</button>
+ <button class="blue-pill" onclick="myFunction('7')">Query7</button>
+ <button class="blue-pill" onclick="myFunction('8')">Query8</button>
+
+<label id="label1">
+Happy query
+</label>
+
+<div id="textareas">
+<textarea id="leftText" rows="26" cols="91">
+  My own query
+</textarea>
+
+<textarea rows="26" cols="91">
+  Result
+</textarea>
+
+</div>
+
+</body>
+</html>
